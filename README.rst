@@ -23,7 +23,7 @@ Services expect a requirements.txt file in the root of projects.*
 2.Migrate Photologue
 =============================
 
-python manage.py migrate photologue
+    $ python manage.py migrate photologue
 
 
 ========================
