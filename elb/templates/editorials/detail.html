@@ -3,17 +3,17 @@
 <div class="title_grey">
 words
 </div>
+
 {% endblock %}
 
 {% block body %}
-
+<div class="editorial_title">
 {{editorial.title}} 
- 
+<p>&nbsp;</p>
+</div> 
+<div class="editorial_details">
 {{editorial.details|safe}}
-
+</div> 
 {% endblock %}
 
-{% block artist_list %}
-{% include 'editorials/editorial_list.html' %}
 
-{% endblock %}

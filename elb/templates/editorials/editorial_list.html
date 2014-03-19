@@ -1,16 +1,17 @@
 {% if editorial_list.count != 0 %}
-
+{% load staticfiles %}
 <div class="words_intro">
 
 <div class="title_grey">REVIEWS & ESSAYS</div>
-
+</br>
 <ul>
 {% for editorial in editorial_list %}
 <li>  
  <a href="/papers/{{editorial.pk}}/{{editorial.title|slugify}}/">{{editorial.title}}</a>	 
  <a href="/papers/{{editorial.pk}}/{{editorial.title|slugify}}/">
-{% endfor %}
 </li>
+</br>
+{% endfor %}
 </ul> 
 
 
@@ -20,11 +21,22 @@
 
 
 <div class="title_grey">LINKS</div>
-
+</br>
 <ul>
 
-<li><a href="http://aewstudios.com/">GRADUATE EXHIBITION 2009 by YOLANDE NORRIS</a> </li>
+<li><a target="_blank" href="http://uselesslines.wordpress.com/2009/12/04/preview-anu-school-of-art-graduates-2009/">GRADUATE EXHIBITION 2009 by YOLANDE NORRIS</a> </li>
+</br>
+<li><a target="_blank" href="http://canberracontemporaryartspace.wordpress.com/2011/03/20/shit-miracle/">INFORMALITIES OF SHIT MIRACLE 2010 by DAVID BROKER</a> </li>
+</br>
+<li><a target="_blank" href="http://soa.anu.edu.au/sites/default/files/ThisWayUp_LoRes.pdf">THIS WAY UP CATALOGUE 2010 by ANU SCHOOL OF ART PAINTING DEPARTMENT</a> </li>
+</br>
+<li><a target="_blank" href="http://uselesslines.wordpress.com/2011/02/16/home-fires-blaze-5/">HOME FIRES - BLAZE 5 by YOLANDE NORRIS</a> </li>
+</br>
+<li><a target="_blank" href="http://canberracontemporaryartspace.wordpress.com/2011/02/18/all-fired-up/">ALL FIRED UP! -BLAZE 5 by DAVID BROKER</a> </li>
+</br>
+<li><a target="_blank" href="{% static 'img/word_of_mouth.pdf' %}">SOME WORDS ON WORD OF MOUTH by SARAH RICE</a> </li>
 </ul> 
+
 </div>
 
 

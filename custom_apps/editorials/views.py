@@ -16,8 +16,7 @@ def editorial_random(request):
     context = {}
     context['editorial'] = current_editorials
 
-    #context['editorial'] = current_editorials.order_by('-finish_date')[0]
-    template = 'home.html'
+    template = 'base.html'
     return render_to_response(template, context_instance=RequestContext(request, context))
 
 
@@ -28,7 +27,6 @@ def editorial_list(request):
         context['editorial_list'] = current_editorials
         context['current_exhibits'] = True
     except:
-        #context['editorial_list'] = Editorial.objects.filter(gallery__photos__gt=0).order_by('?')[:6]
         context['editorial_list'] = Editorial.objects.all()
         context['current_exhibits'] = False
         
