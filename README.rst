@@ -25,7 +25,6 @@ Services expect a requirements.txt file in the root of projects.*
 
     $ python manage.py migrate photologue
 
-
 ========================
 
 3.install Custom apps in site_packages
