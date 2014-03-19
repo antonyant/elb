@@ -115,8 +115,8 @@ body {
 	/*border: thin #cccccc solid;*/			
 }
 .menu {
-	margin: 0px 0px 0px 30px;
-	width: 1150px;
+	margin: 0px 0px 0px 0px;
+	width: 1200px;
 	float:left;
 	height:20px;
 	/*border: thin #d7d6d6 solid;*/
