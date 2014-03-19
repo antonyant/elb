@@ -324,7 +324,7 @@ def create_app(app_name, app_type, autostart, extra_info, open_port):
     open_port (boolean) – for applications that listen on a port, whether the port should be open on shared and dedicated IP addresses (optional, default: false)
     """
 
-    return _webfaction_api_call("create_app", app_name, autostart, extra_info, open_port)
+    return _webfaction_api_call("create_app", app_name, app_type, extra_info, open_port)
 
 
 def create_website(website_name, ip, https, subdomains, site_apps):

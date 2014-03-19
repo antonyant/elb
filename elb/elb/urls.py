@@ -11,7 +11,7 @@ from views import galleries, galleries_tag
 urlpatterns = patterns('',
 
     (r'^$', RedirectView.as_view(url='/home/')),
-    url(r'^photologue/', include('photologue.urls')),
+    (r'^photologue/', include('photologue.urls')),
     (r'^papers/', include('editorials.urls')), 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),

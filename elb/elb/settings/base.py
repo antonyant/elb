@@ -33,7 +33,7 @@ TEMPLATE_DEBUG = DEBUG
 ########## MANAGER CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = (
-    ('Your Name', 'your_email@example.com'),
+    ('antony', 'antony@aewstudios.com'),
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
@@ -45,8 +45,8 @@ MANAGERS = ADMINS
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.',
-        'NAME': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': normpath(join(DJANGO_ROOT, 'elb.db')),
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -148,8 +148,10 @@ TEMPLATE_LOADERS = (
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
+
 TEMPLATE_DIRS = (
     normpath(join(SITE_ROOT, 'templates')),
+
 )
 ########## END TEMPLATE CONFIGURATION
 
@@ -185,22 +187,18 @@ DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.flatpages',
-
-    'treemenus',
-    'photologue',  
-    'south',
-
-    'tagging', 
-    'tinymce', 
-
-
-    'gallery_orders', 
-    'editorials',
-
 )
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
+
+    'treemenus',
+    'photologue',  
+    'tagging', 
+    'tinymce', 
+    'gallery_orders', 
+    'editorials',
+
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -256,3 +254,5 @@ INSTALLED_APPS += (
 # Don't need to use South when setting up a test database.
 SOUTH_TESTS_MIGRATE = False
 ########## END SOUTH CONFIGURATION
+
+
