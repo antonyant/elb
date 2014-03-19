@@ -2,7 +2,16 @@
 django-elb-project
 ========================
 
-1.Installation of Dependencies
+1.Create new virtualenv
+=============================
+
+    $ mkvirtualenv elb-env
+
+    $ cd elb-env
+
+=============================
+
+2.Installation of Dependencies
 =============================
 
 Depending on where you are installing dependencies:
@@ -20,13 +29,6 @@ Services expect a requirements.txt file in the root of projects.*
 
 ========================
 
-2.Migrate Photologue
-=============================
-
-    $ python manage.py migrate photologue
-
-========================
-
 3.install Custom apps in site_packages
 =============================
 
@@ -34,5 +36,29 @@ gallery_orders
 editorials
 
 *note: These apps are located in the git repository elb/custom_apps they need to be moved to site_packages for installation .*
+
+========================
+
+4. Sync Database
+=============================
+
+    $ cd elb
+    $ python manage.py syncdb --settings=elb.settings.local
+
+========================
+
+5.Migrate Photologue
+=============================
+
+    $ python manage.py migrate photologue
+
+========================
+
+6.Start Dev server
+=============================
+
+    $ python manage.py runserver --settings=elb.settings.local
+
+
 
 
