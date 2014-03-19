@@ -5,6 +5,8 @@ django-elb-project
 1.Create new virtualenv
 =============================
 
+In development:
+
     $ mkvirtualenv elb-env
 
     $ cd elb-env
@@ -32,8 +34,9 @@ Services expect a requirements.txt file in the root of projects.*
 3.install Custom apps in site_packages
 =============================
 
-gallery_orders
-editorials
+'gallery_orders'
+
+'editorials'
 
 *note: These apps are located in the git repository elb/custom_apps they need to be moved to site_packages for installation .*
 
@@ -42,7 +45,10 @@ editorials
 4. Sync Database
 =============================
 
+In development:
+
     $ cd elb
+
     $ python manage.py syncdb --settings=elb.settings.local
 
 ========================
@@ -56,6 +62,8 @@ editorials
 
 6.Start Dev server
 =============================
+
+In development:
 
     $ python manage.py runserver --settings=elb.settings.local
 
