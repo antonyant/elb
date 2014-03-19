@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+<div class="title_grey">
+exhibitions
+</div>
+{% endblock %}
+
+{% block gall_ent %}
+<table>
+<tr>
+<td>
+<div class="exhib_img">
+<img src="{% static 'img/exhib.jpeg' %}"/>
+</div>
+</td>
+<td valign="top" >
+<div class="exhib_titles">
+{% for gallery in gallery_list %}
+<a href="/galleries/{{gallery.gallery_type.gallery_type}}/{{gallery.gallery.title_slug}}">{{gallery.gallery.title}}</a></br>
+{% endfor %}    
+</div>
+</td>
+</tr>
+</table> 
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

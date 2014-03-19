@@ -1,0 +1,32 @@
+{% if editorial_list.count != 0 %}
+
+<div class="words_intro">
+
+<div class="title_grey">REVIEWS & ESSAYS</div>
+
+<ul>
+{% for editorial in editorial_list %}
+<li>  
+ <a href="/papers/{{editorial.pk}}/{{editorial.title|slugify}}/">{{editorial.title}}</a>	 
+ <a href="/papers/{{editorial.pk}}/{{editorial.title|slugify}}/">
+{% endfor %}
+</li>
+</ul> 
+
+
+{% endif %}
+<br>
+<br>
+
+
+<div class="title_grey">LINKS</div>
+
+<ul>
+
+<li><a href="http://aewstudios.com/">GRADUATE EXHIBITION 2009 by YOLANDE NORRIS</a> </li>
+</ul> 
+</div>
+
+
+
+

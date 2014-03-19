@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<table>
+<tr>
+  <td>
+<div class="exhib_img"><img src="{{MEDIA_URL}}img/exhib.jpeg"/></div>
+</td>
+
+  <td valign="top" >
+<div class="exhib_titles">
+<ul>
+<li>Coffee</li>
+<li>Milk</li>
+</ul> 
+</div>
+{% for gallery in gallery_list %}
+      <td align="right"><a href="/galleries/{{gallery.title_slug}}"><img src="
+      {% for photo in gallery.photos.all %}
+          {% if forloop.first %}
+
+          	 {{photo.get_gallery_index_url}}
+          {% endif %}
+      {% endfor %}
+      " width="170"/></a>
+        <div class="gall_title">{{gallery.title}}</div>
+
+      </td>
+  {% ifequal forloop.counter 4 %}
+    </tr>
+      <tr>
+  {% endifequal %}
+{% endfor %}  
+</div>
+</td>
+
+</tr>
+</table>
+
+{% endblock %}
+
+
+{% block gall_ent %}{% endblock %}

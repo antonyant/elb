@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head> 
+
+<title>emma beer</title>
+
+<link rel="shortcut icon" href="{{MEDIA_URL}}img/favicon.ico" /> 
+<meta name="description" content="Emma Beer -- approaches painting as a process and an experience, exploring the possibilities and limitations of abstraction in contemporary painting. The painting is both object and model, challenging notions of the process and “act of painting” and making the work of and about itself. " /> 
+<meta name="keywords" content="Artists Canberra, ANU School of Art, Painting, Painter, Visual Art, Australian Artists" /> 
+<meta name="robots" content="index, follow" /> 
+<link href="{{MEDIA_URL}}css/base.css" rel="stylesheet" type="text/css" />
+
+<!--[if IE]>
+<link rel="stylesheet" href="{{MEDIA_URL}}css/ie.css" type="text/css" />
+<![endif]--> 
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  
+	 $('#firstFade').hide().fadeIn(4000).delay(50).fadeOut(2000);
+	 $('#secondShow').hide().delay(6550).fadeIn(3000);
+	 
+  });   
+</script>
+
+
+
+</head> 
+
+<body class="home_page"> 
+
+<div id="firstFade" style="width: 100%; padding-top: 50px; padding-left: 0px; text-align: center;">
+
+<div class="wrapper">
+<div class="logo_splash">
+emma beer
+</div>
+<img src="{{MEDIA_URL}}img/splash.jpg" alt="emma beer" /></div></div>
+
+<div id="secondShow">
+<div class="wrapper">
+
+<div class="logo">
+emma beer
+<div class="title_grey">
+{{ flatpage.title }}
+</div>
+</div>
+
+<div class="main_content">
+
+<div class="content">
+
+{% block body %}{% endblock %}
+{{ flatpage.content|safe }}
+{% block gall_ent %}{% endblock %}
+
+</div>
+
+   <div class="menu">
+{% load tree_menu_tags %}
+{% show_menu "mainMenu" "unordered-list" %}
+  </div>
+
+</div>
+
+</div>
+</div> 
+
+
+</body>
+</html>
