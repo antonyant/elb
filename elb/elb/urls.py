@@ -20,12 +20,18 @@ urlpatterns = patterns('',
     (r'^galleries/(?P<tag>[-\w]+)/(?P<slug>[-\w]+)/$', galleries),
 
 )
+
 urlpatterns += patterns('django.contrib.flatpages.views',
     (r'^(?P<url>.*/)$', 'flatpage'),
 )
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns += patterns('',
                             url(r'^__debug__/', include(debug_toolbar.urls)),
                             )
+
+
+
